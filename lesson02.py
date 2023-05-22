@@ -3,7 +3,20 @@
 # чтобы все монетки были повернуты вверх одной и той же стороной. 
 # Выведите минимальное количество монет, которые нужно перевернуть
 
-
+def flipCoins():
+    import numpy as np
+    coins = np.random.randint(5, 10)
+    generator = lambda n:np.random.randint(2, size=n)
+    
+    coinsList = list(generator(coins))
+    print(coinsList)
+    
+    for i in range(len(coinsList)):
+        if coinsList[i] == 0:
+            coinsList[i] = 1
+    print("fixed coins list --> ", coinsList)
+    
+flipCoins()
 
 
 # Задача 12: Петя и Катя – брат и сестра. 
@@ -41,5 +54,5 @@ def gradeNumber(n):
 
 # ----------------------------------------
 
-guessNumber()  
+# guessNumber()  
 # gradeNumber(513)
