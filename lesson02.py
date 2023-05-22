@@ -16,8 +16,6 @@ def flipCoins():
             coinsList[i] = 1
     print("fixed coins list --> ", coinsList)
     
-flipCoins()
-
 
 # Задача 12: Петя и Катя – брат и сестра. 
 # Петя – студент, а Катя – школьница. Петя помогает Кате по математике. 
@@ -52,7 +50,27 @@ def gradeNumber(n):
         print(counter)
         counter = counter * 2
 
-# ----------------------------------------
+# доп задания
+# Задайте список из нескольких чисел. Напишите программу,
+# которая найдёт сумму элементов списка,
+# стоящих на нечётной позиции.
+def findOddPosition():
+    listOfNumbers = [1, 3, 5, 6 ,7 ,8 ,9]
+    oddSum = 0
+    
+    for i in range(len(listOfNumbers)):
+        if i % 2 == 0:
+            oddSum = oddSum + listOfNumbers[i]
+    print(oddSum)
+    
+# Напишите программу, которая найдёт произведение пар чисел списка. 
+# Парой считаем первый и последний элемент, второй и предпоследний и т.д
 
+
+  
+    
+# ----------------------------------------
+# flipCoins()
 # guessNumber()  
 # gradeNumber(513)
+# findOddPosition()
