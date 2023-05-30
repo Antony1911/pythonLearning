@@ -57,10 +57,10 @@ def listCase02():
 # Будем считать, что на вход подается только одно слово, которое содержит либо только английские, либо только русские буквы.
 
 def scrableCase():
-    import camelcase
+    import re
     name = input("Insert your name // Введи имя>   ").upper()
     count = 0
-    
+  
     engDict = {
         1:["A","E","I","O","U","L","N","S","T","R"], 
         2:["G","D"], 
@@ -81,10 +81,15 @@ def scrableCase():
         7:["Ф", "Щ", "Ъ"], 
     }
     
+    mainDict = engDict
+    
+    if bool(re.search('[а-яА-Я]', name)) != 0:
+        mainDict = rusDict
     
     for char in name:
-        for i in engDict:
-            if char in engDict[i]:
+        
+        for i in mainDict:
+            if char in mainDict[i]:
                 count = count + i
     print(count)
     
