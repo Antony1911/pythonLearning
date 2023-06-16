@@ -1,3 +1,4 @@
 https://cryptii.com/
 https://jsonformatter.org/
 https://jsoneditoronline.org/
+https://www.ipswitch.com/blog/use-aes-256-encryption-secure-data
