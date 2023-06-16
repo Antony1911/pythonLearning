@@ -26,15 +26,12 @@ def listCase02():
     n = int(input("Insert the lenght of the list >   "))
     x = int(input("number: "))
     number = 0
-    listOfElements = []
-    for i in range(0, n):
-        listOfElements.append(i+1)
-    
-    for i in listOfElements:
+    for i in range(0, n+1):
         if i == x or x > i:
             number = i
+        
     print(number)
-
+listCase02()
 
 # *Задача 20: * В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность. 
 # В случае с английским алфавитом очки распределяются так:
@@ -65,7 +62,7 @@ def scrableCase():
         1:["A","E","I","O","U","L","N","S","T","R"], 
         2:["G","D"], 
         3:["B","C","M","P"], 
-        4:["F","H","V","W","Y"], 
+        4:["F","H","V","W","Y"],
         5:["K"], 
         6:["J","X"], 
         7:["Q","Z"], 
@@ -92,5 +89,3 @@ def scrableCase():
             if char in mainDict[i]:
                 count = count + i
     print(count)
-    
-scrableCase()
